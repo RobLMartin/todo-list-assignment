@@ -1,23 +1,11 @@
 import React from "react";
 
 export default function Card({ todo }) {
-  const handleChange = (e) => {
-    fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
-      method: "PATCH",
-      body: JSON.stringify({
-        completed: e.target.checked,
-      }),
-    });
-  };
+  /**
+   * TODO:
+   * 1. Add a checkbox to the card
+   * 2. When the checkbox is checked, make a data call to JsonPlaceholder to patch the todo with todo.id and completed: e.target.checked"
+   */
 
-  return (
-    <div className="card">
-      {todo.title}
-      <input
-        type="checkbox"
-        onChange={handleChange}
-        defaultChecked={todo.completed}
-      />
-    </div>
-  );
+  return <div className="card">{todo.title}</div>;
 }
