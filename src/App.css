@@ -12,9 +12,16 @@
 .card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1em;
   background-color: #1a1a1a;
   border-radius: 5px;
+}
+
+.card-controls {
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 
 .filters {
