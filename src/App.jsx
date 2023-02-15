@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Filters from "./components/filters";
 import Card from "./components/card";
+import CreateTodoForm from "./components/create.todo.form";
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
@@ -40,6 +41,7 @@ function App() {
         onChangeCompleted={handleChangeCompleted}
       />
       <div className="list">
+        <CreateTodoForm />
         {todos.map((todo) => {
           return <Card key={todo.id} todo={todo} />;
         })}
